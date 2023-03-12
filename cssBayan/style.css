@@ -1,0 +1,154 @@
+@media(max-width: 320px) {
+  body {
+    font-size: 1em;
+  }
+  .mem{
+    margin: 0 5%
+  }
+  h1 {
+    font-size: 2em;
+  }
+  .icon {
+    border-width: 0.5rem 0.3rem 0 0.3rem;
+  }
+  .mem-input:checked~.mem-text .icon {
+    border-width: 0 0.3rem 0.5rem 0.3rem;
+  }
+}
+
+@media (min-width:321px) and (max-width: 820px) {
+  body {
+    font-size: 1.5em;
+  }
+  .mem{
+    margin: 0 10%
+  }
+  h1 {
+    font-size: 2.5em;
+  }
+  .icon {
+    border-width: 0.8rem 0.5rem 0 0.5rem;
+  }
+
+  .mem-input:checked~.mem-text .icon {
+    border-width: 0 0.5rem 0.8rem 0.5rem;
+  }
+}
+
+@media (min-width:821px) {
+  body {
+    font-size: 2em;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  .mem {
+    margin: 0 20%
+  }
+  .icon {
+    border-width: 1rem 0.7rem 0 0.7rem;
+  }
+
+  .mem-input:checked~.mem-text .icon {
+    border-width: 0 0.7rem 1rem 0.7rem;
+  }
+  .mem {
+    cursor: pointer;
+  }
+
+  .mem-text {
+    cursor: pointer;
+  }
+
+  .mem-input:hover~.mem-img {
+    display: block;
+    animation: shows 1s;
+  }
+  }
+
+
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  background-color:#fcffe1;
+  margin: 0 auto 50%;
+}
+
+
+h1 {
+  color: #fe7182;
+  text-align: center;
+}
+.mem { 
+  border: 0.1rem solid #fbd39b;
+}
+
+.mem-text {
+  display: flex;
+  padding: 3%;
+  transition: background-color .5s ease-out;
+  justify-content: space-between;
+  align-items: center;
+}
+.text {
+  display: block;
+}
+.icon {
+  content: "";
+  display: block;
+  border-style: solid;
+  border-color: #fbd39b transparent transparent transparent;
+  transition: border-width 1s;
+}
+
+.mem-input {
+  width: 0;
+  height: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+}
+
+.mem-input:checked~.mem-text {
+  background-color:#fb9ba6;
+  transition: background-color .5s ease-out;
+}
+
+.mem-input:checked~.mem-text .icon {
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+  transition: border-width 1s;
+}
+
+.mem-input:checked ~.mem-img {
+  display: block;
+  animation: shows 1s;
+  }
+
+.mem-img {
+  display: none;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.mem-img img{
+  width: 60%;
+}
+
+@keyframes shows {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+
+  to {
+    opacity: 1;
+    width: 95%;
+  }
+}
+
